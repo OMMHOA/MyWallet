@@ -1,14 +1,17 @@
 package com.example.mywallet.ui.main
 
 import android.content.Context
+import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.example.mywallet.R
 
 private val TAB_TITLES = arrayOf(
-    R.string.tab_text_1,
-    R.string.tab_text_2
+    R.string.balance_text,
+    R.string.transactions_text,
+    R.string.statistics_text,
+    R.string.settings_text
 )
 
 /**
@@ -18,10 +21,19 @@ private val TAB_TITLES = arrayOf(
 class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     FragmentPagerAdapter(fm) {
 
+    private val TAG = "SectionsPagerAdapter"
+
     override fun getItem(position: Int): Fragment {
-        // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
-        return PlaceholderFragment.newInstance(position + 1)
+        return when (position) {
+            0 -> Balance.newInstance()
+            1 -> Transactions.newInstance()
+            2 -> Statistics.newInstance()
+            3 -> Settings.newInstance()
+            else -> {
+                Log.w(TAG, "getItem invoked on $position which is irregular.")
+                getItem(0)
+            }
+        }
     }
 
     override fun getPageTitle(position: Int): CharSequence? {
@@ -29,7 +41,6 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     }
 
     override fun getCount(): Int {
-        // Show 2 total pages.
-        return 2
+        return 4
     }
 }

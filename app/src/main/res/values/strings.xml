@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">MyWallet</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+
+    <string name="balance_text">Balance</string>
+    <string name="transactions_text">Transactions</string>
+    <string name="statistics_text">Statistics</string>
+    <string name="settings_text">Settings</string>
+    <string name="income_button">+ Income</string>
+    <string name="expense_button">- Expense</string>
+
 </resources>
