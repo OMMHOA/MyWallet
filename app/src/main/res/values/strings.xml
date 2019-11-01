@@ -1,11 +1,21 @@
 <resources>
     <string name="app_name">MyWallet</string>
 
-    <string name="balance_text">Balance</string>
-    <string name="transactions_text">Transactions</string>
-    <string name="statistics_text">Statistics</string>
-    <string name="settings_text">Settings</string>
-    <string name="income_button">+ Income</string>
-    <string name="expense_button">- Expense</string>
+    <string name="balance">Balance</string>
+    <string name="income">+ Income</string>
+    <string name="expense">- Expense</string>
 
+    <string name="transactions">Transactions</string>
+    <string name="blances">Balances:</string>
+    <string name="incomes">Incomes</string>
+    <string name="categories">Categories:</string>
+    <string name="expenses">Expenses</string>
+    <string name="period">Period:</string>
+    <string name="start_date">Start date</string>
+    <string name="end_date">End date</string>
+    <string name="filter">Filter</string>
+
+    <string name="statistics">Statistics</string>
+
+    <string name="settings">Settings</string>
 </resources>

@@ -8,10 +8,10 @@ import androidx.fragment.app.FragmentPagerAdapter
 import com.example.mywallet.R
 
 private val TAB_TITLES = arrayOf(
-    R.string.balance_text,
-    R.string.transactions_text,
-    R.string.statistics_text,
-    R.string.settings_text
+    R.string.balance,
+    R.string.transactions,
+    R.string.statistics,
+    R.string.settings
 )
 
 /**
